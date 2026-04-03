@@ -26,6 +26,11 @@ An end-to-end Machine Learning web application built with Django that detects an
 *   **Styling:** Custom CSS3 (Glassmorphism, CSS Animations, CSS Variables)
 *   **Typography:** Google Fonts (Inter)
 
+### Dataset Used
+
+fake-and-real-news-dataset by Kaggle
+Download here: https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset?select=Fake.csv
+
 ## 🚀 How It Works
 1.  **Data Ingestion:** The user pastes a news excerpt into the frontend text area.
 2.  **Vectorization:** The Django view (`views.py`) intercepts the POST request and passes the raw text into the pre-trained `TfidfVectorizer`. This converts the string into a numerical array of term frequencies.
