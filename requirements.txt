@@ -1,7 +1,4 @@
 pandas 
-sklearn.model_selection
-sklearn.feature_extraction.text
-sklearn.linear_model import
-sklearn.metrics
+scikit-learn
 joblib
 os
