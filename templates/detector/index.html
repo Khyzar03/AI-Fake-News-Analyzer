@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Fake News Detector</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="background-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+    </div>
+
+    <div class="container glass-panel">
+        <header>
+            <h1>AI Fake News <span>Analyzer</span></h1>
+            <p>Determine the authenticity of any news!</p>
+        </header>
+
+        <form method="POST" action="{% url 'index' %}">
+            {% csrf_token %}
+            <div class="input-group">
+                <textarea name="news_text" placeholder="Paste the news article or headline here..."
+                    required>{{ news_text }}</textarea>
+            </div>
+            <button type="submit" class="analyze-btn">Analyze Accuracy</button>
+        </form>
+
+        {% if prediction %}
+        <div class="result-box {% if prediction.is_fake %}result-fake{% else %}result-real{% endif %}">
+            <div class="result-header">
+                <h2>Analysis Complete</h2>
+            </div>
+            <div class="result-content">
+                <div class="score-circle">
+                    <span class="label">{{ prediction.label }}</span>
+                </div>
+                <p class="description">
+                    {% if prediction.is_fake %}
+                    The content shows signs of misinformation. Please verify the information from trusted sources.
+                    {% else %}
+                    This news appears to be reliable and factually accurate based on the analysis.
+                    {% endif %}
+                </p>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
+    <footer class="portfolio-footer">
+        <p>Developed by <strong>Khizar Junaid</strong></p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/khizar-junaid-495062190/" target="_blank"
+                rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/Khyzar03" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
