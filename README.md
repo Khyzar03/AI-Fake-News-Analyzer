@@ -1,5 +1,8 @@
-# AI-Fake-News-Analyzer
-An end-to-end Machine Learning web application built with Django that detects and prevents the spread of misinformation. This project analyzes news text using advanced Natural Language Processing (NLP) techniques to determine the probability of the content being factual or artificially sensationalized/fake.
+# AI Fake News Analyzer
+
+An end-to-end Machine Learning web application built with Django that detects and prevents the spread of misinformation. 
+
+This project analyzes news text using advanced Natural Language Processing (NLP) techniques to determine the probability of the content being factual or artificially sensationalized/fake.
 
 ## ✨ Features
 *   **Machine Learning Pipeline:** Trained on a comprehensive dataset of 40,000+ real and fake news articles.
@@ -25,11 +28,6 @@ An end-to-end Machine Learning web application built with Django that detects an
 *   **Markup:** HTML5 + Django Template Language
 *   **Styling:** Custom CSS3 (Glassmorphism, CSS Animations, CSS Variables)
 *   **Typography:** Google Fonts (Inter)
-
-### Dataset Used
-
-fake-and-real-news-dataset by Kaggle
-Download here: https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset?select=Fake.csv
 
 ## 🚀 How It Works
 1.  **Data Ingestion:** The user pastes a news excerpt into the frontend text area.
